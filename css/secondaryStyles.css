@@ -42,3 +42,31 @@
     color: #0BA376;
     -webkit-transition: background-color 0.5s;
 }
+
+.research-interests .left-part {
+    width: 10%;
+    display: table-cell;
+    padding-right: 25px;
+    min-height: 100%;
+    text-align: right;
+    vertical-align: top
+}
+
+.research-interests .right-part {
+    width: 90%;
+    display: table-cell;
+    padding-left: 25px;
+    padding-right: 15px;
+    vertical-align: top
+}
+
+
+
+.research-interests .divider {
+    position: absolute;
+    top: 0;
+    left: 10%;
+    bottom: 0;
+    width: 1px;
+    background-color: #eee
+}
