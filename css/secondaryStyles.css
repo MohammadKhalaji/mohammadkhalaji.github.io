@@ -1,0 +1,44 @@
+.right-part p {
+    margin: 0;
+}
+
+.contactCard {
+    background-color: #FCFCFC;
+    -webkit-transition: background-color 0.5s;
+}
+
+.contactCard:hover {
+    background-color: #D5D6D7;
+    -webkit-transition: background-color 0.5s;
+}
+
+.certi-logo {
+    text-align: center;
+    font-size: 3rem;
+    color: #0BA376;
+}
+.certi-id {
+    color: #777777;
+    font-weight: initial
+}
+
+
+
+.certificate-item {
+    -webkit-transition: background-color 0.5s;
+}
+
+.certificate-item:hover {
+    background-color: #F5F5F5;
+    -webkit-transition: background-color 0.5s;
+}
+
+.knowledges li {
+    -webkit-transition: background-color 0.5s;
+}
+
+.knowledges li:hover {
+    background-color: white;
+    color: #0BA376;
+    -webkit-transition: background-color 0.5s;
+}
