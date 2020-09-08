@@ -61,7 +61,6 @@
 }
 
 
-
 .research-interests .divider {
     position: absolute;
     top: 0;
@@ -69,4 +68,23 @@
     bottom: 0;
     width: 1px;
     background-color: #eee
+}
+
+@media only screen and (max-width:480px) {
+    .timeline-second-style .left-part {
+        width: 100%;
+        display: block;
+        padding-left: 25px;
+        min-height: 100%;
+        text-align: left
+    }
+    .timeline-second-style .divider {
+        left: 0
+    }
+    .timeline-second-style .right-part {
+        width: 100%;
+        display: block;
+        padding-left: 25px;
+        padding-right: 0
+    }
 }
