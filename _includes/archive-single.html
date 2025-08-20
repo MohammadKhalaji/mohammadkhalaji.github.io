@@ -38,10 +38,28 @@
       <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> {% include read-time.html %}</p>
     {% endif %}
 
+    {% if post.author_list %}
+    <p class="archive__item-authors" itemprop="author">
+      {% for author in post.author_list %}
+        {% if author.url %}
+          <a href="{{ author.url }}">{{ author.name }}</a>{% if forloop.last == false %}, {% endif %}
+        {% else %}
+          {{ author.name }}{% if forloop.last == false %}, {% endif %}
+        {% endif %}
+      {% endfor %}
+      </p>
+    {% endif %}
+
         {% if post.collection == 'teaching' %}
           <p> {{ post.type }}, <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }} </p>
         {% elsif post.collection == 'publications' %}
-          <p>Published in <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%B %Y" }} </p>
+          <p>
+          {% if post.finalized %}
+          Published in 
+          {% else %}
+          To appear in 
+          {% endif %}
+          <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%B %Y" }} </p>
         {% elsif post.date %}
          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].date_label | default: "Published:" }}</strong> <time datetime="{{ post.date | default: "1900-01-01" | date_to_xmlschema }}">{{ post.date | default: "1900-01-01" | date: "%B %d, %Y" }}</time></p>
         {% endif %}
